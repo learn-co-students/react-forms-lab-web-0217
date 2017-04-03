@@ -14,7 +14,7 @@ ${'word '.repeat(5)}`;
 
 const VALID_POEM_WITH_EXTRA_WHITESPACE = `${'word '.repeat(5)}
   ${'word '.repeat(3)}
-${'word '.repeat(5)}  `;
+${'word '.repeat(5)}`;
 
 describe('<PoemWriter />', function () {
   const spy = sinon.spy();
