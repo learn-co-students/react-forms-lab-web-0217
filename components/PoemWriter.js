@@ -23,12 +23,10 @@ class PoemWriter extends React.Component {
 
   handleChange(event) {
     let content = event.target.value
-    if (content) {
       this.setState({
           content: content,
           isValid: validatePoem(content)
-        })
-      }
+        })    
   }
 
   render() {
