@@ -35,8 +35,8 @@ describe('<LoginForm />', function () {
 
     it('should call the `onSubmit` callback prop when the form is being submitted', function () {
       const wrapper = shallow(<LoginForm onSubmit={spy} />);
-      wrapper.find('#test-username').simulate('change', { target: { value: 'johndoe' } });
-      wrapper.find('#test-password').simulate('change', { target: { value: 'supersecret' } });
+      wrapper.find('#test-username').simulate('change', { target: { value: 'johndoe', name:"username" } });
+      wrapper.find('#test-password').simulate('change', { target: { value: 'supersecret', name:"password" } });
       wrapper.find('form').simulate('submit', { preventDefault: noop });
       expect(spy.calledOnce).toBeTruthy('The `onSubmit` prop is not being called exactly once');
     });
