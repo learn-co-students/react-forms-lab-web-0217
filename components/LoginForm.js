@@ -31,7 +31,7 @@ export default class LoginForm extends React.Component {
     const password = this.state.password
 
     if (!username || !password) {
-      console.log("TYPE SOMETHING, STUPID!!")
+      alert("TYPE SOMETHING, STUPID!!")
       return false
     }
 
