@@ -18,7 +18,7 @@ export default class TwitterMessage extends React.Component {
     return (
       <div>
         <strong>Your message:</strong>
-        <input onChange={this.handleChange} type="text" />
+        <input onChange={this.handleChange} value={this.state.tweet} type="text" />
         <p>Characters remaining: {this.props.maxChars - this.state.tweet.length}</p>
       </div>
     );

@@ -12,7 +12,6 @@ export default class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     if (this.state.username === "" || this.state.password === "") {
-      console.log("You must enter valid values for username and password")
       return
     } else { this.props.onSubmit( this.state ) }
   }
@@ -29,13 +28,13 @@ export default class LoginForm extends React.Component {
         <div>
           <label>
             Username
-            <input onChange={this.handleChange} id="test-username" name="username" type="text" />
+            <input onChange={this.handleChange} id="test-username" value={this.state.username} name="username" type="text" />
           </label>
         </div>
         <div>
           <label>
             Password
-            <input onChange={this.handleChange} id="test-password" name="password" type="password" />
+            <input onChange={this.handleChange} id="test-password" value={this.state.password} name="password" type="password" />
           </label>
         </div>
         <div>
@@ -45,3 +44,7 @@ export default class LoginForm extends React.Component {
     );
   }
 }
+
+LoginForm.propTypes = {
+  onSubmit: React.PropTypes.func,
+};
