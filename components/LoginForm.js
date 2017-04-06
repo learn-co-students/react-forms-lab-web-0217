@@ -4,7 +4,7 @@ export default class LoginForm extends React.Component {
   constructor() {
     super();
 
-    this.state = {username: "", password: ""};
+    this.state = {username: '', password: ''};
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
@@ -13,7 +13,9 @@ export default class LoginForm extends React.Component {
     e.preventDefault()
     if (this.state.username === "" || this.state.password === "") {
       return
-    } else { this.props.onSubmit( this.state ) }
+    }
+    debugger
+    this.props.onSubmit( this.state )
   }
 
   handleChange(e) {
