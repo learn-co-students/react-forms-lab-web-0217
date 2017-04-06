@@ -11,7 +11,6 @@ export default class LoginForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    let event = e.target
     if (this.state.username === "" || this.state.password === "") {
       console.log("You must enter valid values for username and password")
       return
@@ -19,9 +18,8 @@ export default class LoginForm extends React.Component {
   }
 
   handleChange(e) {
-    let event = e.target
     this.setState({
-      [event.name]: event.value
+      [e.target.name]: e.target.value
     })
   }
 
