@@ -9,6 +9,7 @@ export default class TwitterMessage extends React.Component {
   }
 
   handleChange(e) {
+    if (this.props.maxChars - e.target.value.length < 0) return
     this.setState({
       tweet: e.target.value
     })
