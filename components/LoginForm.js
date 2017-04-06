@@ -14,7 +14,6 @@ export default class LoginForm extends React.Component {
     if (this.state.username === "" || this.state.password === "") {
       return
     }
-    debugger
     this.props.onSubmit( this.state )
   }
 

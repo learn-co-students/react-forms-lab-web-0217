@@ -4,8 +4,8 @@ export default class PoemWriter extends React.Component {
   constructor() {
     super();
 
-    // this.state = {poem: "", valid: false};
-    this.state = {poem: ""};
+    this.state = {poem: "", valid: false};
+    // this.state = {poem: ""};
     this.handleChange = this.handleChange.bind(this)
 
   }
@@ -13,7 +13,7 @@ export default class PoemWriter extends React.Component {
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value,
-      // valid: this.isValid(e.target.value)
+      valid: this.isValid(e.target.value)
     })
   }
 
@@ -34,8 +34,8 @@ export default class PoemWriter extends React.Component {
     return (
       <div>
         <textarea onChange={this.handleChange} name="poem" rows="3" cols="60" />
-        {/* {this.state.valid ? <div id="valid">How very poetic!</div> : <div id="poem-validation-error" style={{color: 'red'}}>This poem is not written in the right structure!</div>} */}
-        {this.validate()}
+        {this.state.valid ? <div id="valid">How very poetic!</div> : <div id="poem-validation-error" style={{color: 'red'}}>This poem is not written in the right structure!</div>}
+        {/* {this.validate()} */}
       </div>
     );
   }
